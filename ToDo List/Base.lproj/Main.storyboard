@@ -31,11 +31,89 @@
                             <outlet property="delegate" destination="UbA-h5-a9b" id="pNO-8l-BhS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Список дел" largeTitleDisplayMode="always" id="KjM-rx-sKG"/>
+                    <navigationItem key="navigationItem" title="Список дел" largeTitleDisplayMode="always" id="KjM-rx-sKG">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="YP7-5r-e6Z"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nMF-WF-yAv">
+                            <connections>
+                                <segue destination="DBp-4b-2v9" kind="show" id="lnw-j0-cq2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2s-0P-awr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671" y="219"/>
+            <point key="canvasLocation" x="516" y="218"/>
+        </scene>
+        <!--Новое дело-->
+        <scene sceneID="eNe-7R-yHX">
+            <objects>
+                <tableViewController id="DBp-4b-2v9" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="x86-dR-t76">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Основное" id="Pl7-Ih-rsY">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="pZD-3A-4Yh">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pZD-3A-4Yh" id="8f2-jV-LHD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sbl-oh-2Cy">
+                                                    <rect key="frame" x="16" y="11" width="343" height="28"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81L-SB-fhL">
+                                                            <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="81L-SB-fhL" secondAttribute="height" multiplier="1:1" id="mQj-vS-dFQ"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Button" image="Unchecked"/>
+                                                        </button>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Напомнить мне о ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BZ9-Or-pzy">
+                                                            <rect key="frame" x="38" y="0.0" width="305" height="28"/>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Sbl-oh-2Cy" firstAttribute="leading" secondItem="8f2-jV-LHD" secondAttribute="leadingMargin" id="AKF-8R-BOi"/>
+                                                <constraint firstItem="Sbl-oh-2Cy" firstAttribute="top" secondItem="8f2-jV-LHD" secondAttribute="topMargin" id="Yyx-8V-FN0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Sbl-oh-2Cy" secondAttribute="trailing" id="poA-0Z-vg3"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Sbl-oh-2Cy" secondAttribute="bottom" id="zVx-bY-iYg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="DBp-4b-2v9" id="fMX-Xm-hTs"/>
+                            <outlet property="delegate" destination="DBp-4b-2v9" id="1W4-Vl-02g"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Новое дело" id="ZG2-Fj-mfJ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="e20-K7-mC7">
+                            <connections>
+                                <segue destination="YG8-Nk-amh" kind="unwind" identifier="cancelUnw" unwindAction="unwindToToDoList:" id="EwL-Sz-dP6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="mvi-lI-asa">
+                            <connections>
+                                <segue destination="YG8-Nk-amh" kind="unwind" identifier="saveUnw" unwindAction="unwindToToDoList:" id="ih6-sT-ife"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3N-Xn-P8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="YG8-Nk-amh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1322" y="215"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b31-wy-ya0">
@@ -54,4 +132,7 @@
             <point key="canvasLocation" x="-281" y="219"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Unchecked" width="44" height="44"/>
+    </resources>
 </document>

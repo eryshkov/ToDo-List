@@ -13,6 +13,8 @@
 		5C343046217E4741002D68A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C343044217E4741002D68A1 /* LaunchScreen.storyboard */; };
 		5C34304E217E495B002D68A1 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C34304D217E495B002D68A1 /* ToDo.swift */; };
 		5C343050217E49EC002D68A1 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C34304F217E49EC002D68A1 /* ToDoTableViewController.swift */; };
+		5C343052217FA91B002D68A1 /* DetailToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C343051217FA91B002D68A1 /* DetailToDoTableViewController.swift */; };
+		5C343054217FAB3E002D68A1 /* KeyboardHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C343053217FAB3E002D68A1 /* KeyboardHide.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		5C343047217E4741002D68A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C34304D217E495B002D68A1 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		5C34304F217E49EC002D68A1 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
+		5C343051217FA91B002D68A1 /* DetailToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailToDoTableViewController.swift; sourceTree = "<group>"; };
+		5C343053217FAB3E002D68A1 /* KeyboardHide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				5C34303B217E4741002D68A1 /* AppDelegate.swift */,
 				5C34304D217E495B002D68A1 /* ToDo.swift */,
 				5C34304F217E49EC002D68A1 /* ToDoTableViewController.swift */,
+				5C343051217FA91B002D68A1 /* DetailToDoTableViewController.swift */,
+				5C343053217FAB3E002D68A1 /* KeyboardHide.swift */,
 				5C34303F217E4741002D68A1 /* Main.storyboard */,
 				5C343042217E4741002D68A1 /* Assets.xcassets */,
 				5C343044217E4741002D68A1 /* LaunchScreen.storyboard */,
@@ -140,6 +146,8 @@
 			files = (
 				5C34303C217E4741002D68A1 /* AppDelegate.swift in Sources */,
 				5C343050217E49EC002D68A1 /* ToDoTableViewController.swift in Sources */,
+				5C343052217FA91B002D68A1 /* DetailToDoTableViewController.swift in Sources */,
+				5C343054217FAB3E002D68A1 /* KeyboardHide.swift in Sources */,
 				5C34304E217E495B002D68A1 /* ToDo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,16 +24,6 @@ class DetailToDoTableViewController: UITableViewController {
         }
     }
     
-    var isCompleteButtonnChecked = false {
-        willSet {
-            if newValue {
-                completeButton.setImage(UIImage(named: "Checked"), for: .normal)
-            }else{
-                completeButton.setImage(UIImage(named: "Unchecked"), for: .normal)
-            }
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -88,7 +78,7 @@ class DetailToDoTableViewController: UITableViewController {
     // MARK: - IBActions
     @IBAction func completeButtonPressed(_ sender: UIButton) {
         dismissKeyboard()
-        isCompleteButtonnChecked.toggle()
+        completeButton.isSelected.toggle()
     }
     
     @IBAction func dueDatePickerValueChanged(_ sender: UIDatePicker) {

@@ -71,6 +71,7 @@
                                                                 <constraint firstAttribute="width" secondItem="81L-SB-fhL" secondAttribute="height" multiplier="1:1" id="mQj-vS-dFQ"/>
                                                             </constraints>
                                                             <state key="normal" title="Button" image="Unchecked"/>
+                                                            <state key="selected" image="Checked"/>
                                                             <connections>
                                                                 <action selector="completeButtonPressed:" destination="DBp-4b-2v9" eventType="touchUpInside" id="dsa-Pq-c1D"/>
                                                             </connections>
@@ -243,6 +244,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Checked" width="44" height="44"/>
         <image name="Unchecked" width="44" height="44"/>
     </resources>
 </document>

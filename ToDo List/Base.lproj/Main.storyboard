@@ -81,6 +81,9 @@
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <textInputTraits key="textInputTraits"/>
+                                                            <connections>
+                                                                <action selector="textFieldEditingChanged:" destination="DBp-4b-2v9" eventType="editingChanged" id="Guw-zt-5Tl"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -218,6 +221,7 @@
                         <outlet property="dueDateLabel" destination="OUY-0Q-e7f" id="bZd-db-UNP"/>
                         <outlet property="dueDatePicker" destination="Kwv-1j-HEB" id="08w-P2-Alx"/>
                         <outlet property="noteLabel" destination="Fxl-Cu-rZI" id="BVw-p5-XYc"/>
+                        <outlet property="saveButton" destination="mvi-lI-asa" id="ML1-gf-ag3"/>
                         <outlet property="titleLabel" destination="BZ9-Or-pzy" id="GVo-SD-Fgj"/>
                     </connections>
                 </tableViewController>

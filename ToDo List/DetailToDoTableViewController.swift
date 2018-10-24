@@ -15,6 +15,7 @@ class DetailToDoTableViewController: UITableViewController {
     @IBOutlet weak var dueDatePicker: UIDatePicker!
     @IBOutlet weak var dueDateLabel: UILabel!
     @IBOutlet weak var noteLabel: UITextField!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     var dueDatePickerCellIndexPath = IndexPath(row: 2, section: 0)
     
@@ -31,12 +32,21 @@ class DetailToDoTableViewController: UITableViewController {
         noteLabel.delegate = self
         
         updateDueDateLabel()
+        updateSaveButton(titleLabel)
     }
     
     func updateDueDateLabel() {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         dueDateLabel.text = formatter.string(from: dueDatePicker.date)
+    }
+    
+    func updateSaveButton(_ sender: UITextField) {
+        if (sender.text?.trimmingCharacters(in: .whitespacesAndNewlines).count)! > 0 {
+            saveButton.isEnabled = true
+        } else {
+            saveButton.isEnabled = false
+        }
     }
 
     // MARK: - Table view data source
@@ -84,6 +94,10 @@ class DetailToDoTableViewController: UITableViewController {
     @IBAction func dueDatePickerValueChanged(_ sender: UIDatePicker) {
         dismissKeyboard()
         updateDueDateLabel()
+    }
+    
+    @IBAction func textFieldEditingChanged(_ sender: UITextField) {
+        updateSaveButton(sender)
     }
     
 }

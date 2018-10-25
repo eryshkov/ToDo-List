@@ -60,17 +60,49 @@
 		5C34303A217E4741002D68A1 /* ToDo List */ = {
 			isa = PBXGroup;
 			children = (
-				5C34303B217E4741002D68A1 /* AppDelegate.swift */,
-				5C34304D217E495B002D68A1 /* ToDo.swift */,
-				5C34304F217E49EC002D68A1 /* ToDoTableViewController.swift */,
-				5C343051217FA91B002D68A1 /* DetailToDoTableViewController.swift */,
-				5C343053217FAB3E002D68A1 /* KeyboardHide.swift */,
-				5C34303F217E4741002D68A1 /* Main.storyboard */,
+				5CE06A1E2182368E009468CA /* Model */,
+				5CE06A1F21823699009468CA /* Viev */,
+				5CE06A20218236A1009468CA /* Controller */,
 				5C343042217E4741002D68A1 /* Assets.xcassets */,
-				5C343044217E4741002D68A1 /* LaunchScreen.storyboard */,
+				5C34303B217E4741002D68A1 /* AppDelegate.swift */,
+				5CE06A21218236E0009468CA /* Extensions */,
 				5C343047217E4741002D68A1 /* Info.plist */,
 			);
 			path = "ToDo List";
+			sourceTree = "<group>";
+		};
+		5CE06A1E2182368E009468CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C34304D217E495B002D68A1 /* ToDo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5CE06A1F21823699009468CA /* Viev */ = {
+			isa = PBXGroup;
+			children = (
+				5C34303F217E4741002D68A1 /* Main.storyboard */,
+				5C343044217E4741002D68A1 /* LaunchScreen.storyboard */,
+			);
+			path = Viev;
+			sourceTree = "<group>";
+		};
+		5CE06A20218236A1009468CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5C34304F217E49EC002D68A1 /* ToDoTableViewController.swift */,
+				5C343051217FA91B002D68A1 /* DetailToDoTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5CE06A21218236E0009468CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5C343053217FAB3E002D68A1 /* KeyboardHide.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

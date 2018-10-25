@@ -153,46 +153,28 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="dIZ-qQ-3oG">
-                                        <rect key="frame" x="0.0" y="205.5" width="375" height="50"/>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Заметки" id="le5-Kk-JNW">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="1b6-lH-Gb5">
+                                        <rect key="frame" x="0.0" y="261.5" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dIZ-qQ-3oG" id="I6o-YT-Zmj">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заметка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5p1-b5-P8H">
-                                                    <rect key="frame" x="16" y="14.5" width="66.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="5p1-b5-P8H" firstAttribute="centerY" secondItem="I6o-YT-Zmj" secondAttribute="centerY" id="FdZ-5j-msg"/>
-                                                <constraint firstItem="5p1-b5-P8H" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="I6o-YT-Zmj" secondAttribute="trailingMargin" id="P6U-rH-7ck"/>
-                                                <constraint firstItem="5p1-b5-P8H" firstAttribute="leading" secondItem="I6o-YT-Zmj" secondAttribute="leadingMargin" id="zdR-lp-6x7"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="8c8-Pg-shp">
-                                        <rect key="frame" x="0.0" y="255.5" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8c8-Pg-shp" id="BKI-iW-vsn">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1b6-lH-Gb5" id="XnF-h7-itL">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Текст заметки" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fxl-Cu-rZI">
-                                                    <rect key="frame" x="16" y="11" width="343" height="28"/>
+                                                    <rect key="frame" x="16" y="10" width="343" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Fxl-Cu-rZI" firstAttribute="leading" secondItem="BKI-iW-vsn" secondAttribute="leadingMargin" id="IN2-7h-8Iy"/>
-                                                <constraint firstItem="Fxl-Cu-rZI" firstAttribute="top" secondItem="BKI-iW-vsn" secondAttribute="topMargin" id="Qnc-OD-XMR"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Fxl-Cu-rZI" secondAttribute="trailing" id="edI-uG-tQt"/>
-                                                <constraint firstItem="Fxl-Cu-rZI" firstAttribute="bottom" secondItem="BKI-iW-vsn" secondAttribute="bottomMargin" id="efB-i5-5L9"/>
+                                                <constraint firstItem="Fxl-Cu-rZI" firstAttribute="leading" secondItem="XnF-h7-itL" secondAttribute="leadingMargin" id="ByY-Xa-2CU"/>
+                                                <constraint firstItem="Fxl-Cu-rZI" firstAttribute="trailing" secondItem="XnF-h7-itL" secondAttribute="trailingMargin" id="nHh-VF-GEy"/>
+                                                <constraint firstItem="Fxl-Cu-rZI" firstAttribute="centerY" secondItem="XnF-h7-itL" secondAttribute="centerY" id="uEu-kL-Pu7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

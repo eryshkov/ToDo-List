@@ -89,8 +89,14 @@ class ToDoTableViewController: UITableViewController {
     // MARK: - Navigation
 
     @IBAction func unwindToToDoList(_ unwindSegue: UIStoryboardSegue) {
-//        let sourceViewController = unwindSegue.source
-        // Use data from the view controller which initiated the unwind segue
+        guard unwindSegue.identifier == "saveUnw" else {
+            return
+        }
+        
+        guard let pvc = unwindSegue.source as? DetailToDoTableViewController else { return }
+        let indexPath = IndexPath(row: todos.count, section: 0)
+        todos.append(pvc.toDo!)
+        tableView.insertRows(at: [indexPath], with: .fade)
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation

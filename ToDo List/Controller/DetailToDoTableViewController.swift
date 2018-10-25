@@ -17,6 +17,7 @@ class DetailToDoTableViewController: UITableViewController {
     @IBOutlet weak var noteLabel: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    var toDo: ToDo?
     var dueDatePickerCellIndexPath = IndexPath(row: 2, section: 0)
     
     var isDueDatePickerShown = false {
@@ -75,15 +76,22 @@ class DetailToDoTableViewController: UITableViewController {
         }
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard segue.identifier == "saveUnw" else {
+            return
+        }
+        let title = titleLabel.text ?? ""
+        let isComplete = completeButton.isEnabled
+        let dueDate = dueDatePicker.date
+        let notes = noteLabel.text ?? ""
+        
+        toDo = ToDo(title: title, isComplete: isComplete, dueDate: dueDate, notes: notes)
     }
-    */
+    
 
     // MARK: - IBActions
     @IBAction func completeButtonPressed(_ sender: UIButton) {
